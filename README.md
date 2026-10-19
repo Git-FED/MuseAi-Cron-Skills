@@ -1,4 +1,6 @@
-# muse-cron
+# Muse-cron-skills
+
+<img width="1282" height="698" alt="image" src="https://github.com/user-attachments/assets/0935c5ac-e263-4e86-9df7-78365a42e2c6" />
 
 A small, dependency-free cron worker for running Muse AI skills and shell scripts on a predictable schedule.
 
