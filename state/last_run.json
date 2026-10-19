@@ -1,0 +1,8 @@
+{
+  "heartbeat": {
+    "ts": 1792368151.600524,
+    "status": "success",
+    "duration_ms": 2,
+    "output": "heartbeat ok"
+  }
+}
