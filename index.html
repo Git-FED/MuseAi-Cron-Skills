@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>muse-cron — Let the little worker handle it</title>
+  <meta name="description" content="A tiny, colorful, safety-minded cron worker for Muse AI skills and FED-OS automation.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./"><img src="assets/favicon.svg" alt="" width="34" height="34"><span>muse<span class="brand-dot">·</span>cron</span></a>
+    <nav><a class="nav-link" href="#about">About</a><a class="nav-link" href="#features">Features</a><a class="nav-link" href="#community">Community</a><a class="github-link" href="../README.md">Read the README <span>→</span></a></nav>
+  </header>
+
+  <main>
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot"></span> THE TINY WORKER WITH A BIG CLOCK</p>
+        <h1>Let your skills run on time. <em>Probably.</em></h1>
+        <p class="lede">A cheerful, safety-minded cron worker for Muse AI skills, shell scripts, retries, locks, and the occasional sleepy cat.</p>
+        <div class="actions"><a class="button primary" href="../README.md">Get started <span>↗</span></a><a class="button secondary" href="../docs/skill-format.md">See the format</a></div>
+        <div class="mini-proof"><span class="avatar avatar-purple">✦</span><span class="avatar avatar-yellow">⌁</span><span class="avatar avatar-pink">●</span><span>Trusted by tiny automations everywhere</span></div>
+      </div>
+      <div class="hero-visual"><div class="spark spark-a">✦</div><div class="spark spark-b">✦</div><img class="hero-art" src="assets/promo-muse-cron-hero.png" alt="A cartoon robot conductor organizing scheduled tasks while a cat presses a run button"></div>
+    </section>
+
+    <div class="ticker" aria-label="muse-cron highlights"><div class="ticker-track"><span>SAFE RETRIES</span><b>✦</b><span>LOCKS THAT WORK</span><b>✦</b><span>AGENT + SCRIPT</span><b>✦</b><span>ONE-SHOT SKILLS</span><b>✦</b><span>SAFE RETRIES</span><b>✦</b><span>LOCKS THAT WORK</span><b>✦</b><span>AGENT + SCRIPT</span><b>✦</b><span>ONE-SHOT SKILLS</span></div></div>
+
+    <section id="about" class="about reveal">
+      <div><p class="eyebrow">WHAT IS MUSE-CRON?</p><h2>The friendly control room for your scheduled AI work.</h2></div>
+      <div class="about-copy"><p>muse-cron turns a tidy directory of skill definitions into dependable, inspectable jobs. Put a skill in a frequency bucket, describe what it should do, and let the worker handle scheduling, locks, timeouts, retries, logs, and state.</p><p>It is intentionally small and transparent: standard-library Python, Markdown prompts, shell-script support, and an agent adapter that can connect to your Muse runtime through <code>MUSE_AGENT_COMMAND</code>.</p></div>
+    </section>
+
+    <section id="features" class="features reveal">
+      <article class="feature-card card-purple"><span class="feature-icon">⏱</span><div><h2>Schedules</h2><p>Keep daily, hourly, weekly, yearly, and one-shot skills in tidy frequency buckets.</p></div><span class="card-arrow">↗</span></article>
+      <article class="feature-card card-yellow"><span class="feature-icon">🔒</span><div><h2>No pile-ups</h2><p>Per-skill locks stop jobs from tripping over each other in the hallway.</p></div><span class="card-arrow">↗</span></article>
+      <article class="feature-card card-pink"><span class="feature-icon">🤖</span><div><h2>Agent or script</h2><p>Use an agent prompt, a shell script, or both. The worker does not judge.</p></div><span class="card-arrow">↗</span></article>
+    </section>
+
+    <section class="workflow reveal"><div class="workflow-heading"><p class="eyebrow">HOW IT WORKS</p><h2>From skill file to calm little log line.</h2></div><div class="workflow-steps"><div class="workflow-step"><b>01</b><h3>Define</h3><p>Write frontmatter and a clear prompt or companion script.</p></div><div class="workflow-step"><b>02</b><h3>Validate</h3><p>Catch malformed skills before they land in the 3 a.m. queue.</p></div><div class="workflow-step"><b>03</b><h3>Execute</h3><p>Run with a lock, timeout, retries, output capture, and state.</p></div><div class="workflow-step"><b>04</b><h3>Review</h3><p>Read per-skill logs and the last-run status at a glance.</p></div></div></section>
+
+    <section class="schedule-table reveal"><div><p class="eyebrow">BUCKETS AT A GLANCE</p><h2>There is a place for every cadence.</h2><p>Use the explicit schedule in a skill when you need a custom expression. Run-once jobs use an ISO-8601 <code>run_at</code> timestamp and can archive themselves after success.</p></div><div class="schedule-list"><div><strong>minutely</strong><span>* * * * *</span></div><div><strong>hourly</strong><span>5 * * * *</span></div><div><strong>daily</strong><span>0 3 * * *</span></div><div><strong>weekly</strong><span>0 4 * * 1</span></div><div><strong>monthly</strong><span>0 5 1 * *</span></div><div><strong>runonce</strong><span>run_at → archive</span></div></div></section>
+
+    <section class="promo-grid reveal"><div class="promo-card tilt-left"><img src="assets/promo-locks-square.png" alt="Two cartoon cron jobs politely waiting behind a padlock"><p>Overlap prevention, but make it polite.</p></div><div class="promo-card tilt-right"><img src="assets/promo-agent-vs-script.png" alt="A cartoon robot and shell character high-fiving over a schedule board"><p>Agents and scripts can be friends.</p></div></section>
+
+    <section id="community" class="community reveal">
+      <div class="community-copy"><p class="eyebrow">COME HANG OUT</p><h2>Ask questions. Share skills. Bring snacks.</h2><p>Join the Muse AI community and swap ideas with other people who think a cron worker deserves a personality.</p><div class="discord-pill"><span class="discord-mark">◖</span><span>muse-cron community lounge</span></div></div>
+      <div class="discord-frame"><div class="discord-frame-top"><span class="status-dot"></span><strong>LIVE COMMUNITY</strong><span class="frame-stars">✦ ✦ ✦</span></div><iframe src="https://discord.com/widget?id=1400235929154879490&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
+    </section>
+
+    <section class="code-card reveal"><div><p class="eyebrow">THREE COMMANDS TO HAPPINESS</p><h2>Validate. List. Run.</h2><p class="code-caption">Run these from the project root.</p></div><pre><code>./bin/muse-cron validate
+./bin/muse-cron list
+./bin/muse-cron run --due</code></pre></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><a class="brand" href="./"><img src="assets/favicon.svg" alt="" width="34" height="34"><span>FED<span class="brand-dot">·</span>OS</span></a><p>Tools, prompts, and tiny workers for a more capable creative ecosystem.</p><a class="footer-ecosystem" href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">Explore the ecosystem ↗</a></div>
+    <div class="footer-column"><h3>Explore</h3><a href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener noreferrer">Join FED-OS Membership <small>premium</small></a><a href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener noreferrer">Storefront</a><a href="https://whop.com/fedpromptly/" target="_blank" rel="noopener noreferrer">Whop <small>premium</small></a></div>
+    <div class="footer-column"><h3>Contact</h3><a href="mailto:contact@fedpromptly.com">General</a><a href="mailto:support@fedpromptly.com">Support</a><a href="mailto:business@fedpromptly.com">Business</a><a href="mailto:careers@fedpromptly.com">Careers</a></div>
+    <div class="footer-column"><h3>Media</h3><a href="https://substack.com/@fedpromptly" target="_blank" rel="noopener noreferrer">Articles</a><a href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a><a href="https://gitfed.substack.com/" target="_blank" rel="noopener noreferrer">GitFed Blog</a><a href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener noreferrer">Artwork</a></div>
+    <div class="footer-column"><h3>Community & social</h3><a href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer">Developers Discord</a><a href="https://bsky.app/profile/fed-os.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a><a href="https://x.com/Fedpromptly" target="_blank" rel="noopener noreferrer">Advertisement / X</a><a href="https://facebook.com/fedpromptly" target="_blank" rel="noopener noreferrer">Friends / Facebook</a></div>
+    <div class="footer-column"><h3>Support</h3><a href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener noreferrer">Supporters <small>premium</small></a><a href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer">Tips / Donations</a></div>
+    <div class="footer-bottom"><span>muse-cron · FED-OS</span><span>Small worker. Fewer surprises.</span><span>Public links only · private communities stay gated</span></div>
+  </footer>
+  <script>const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('is-visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));</script>
+</body>
+</html>
